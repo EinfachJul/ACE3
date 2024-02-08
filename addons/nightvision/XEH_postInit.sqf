@@ -41,7 +41,7 @@ GVAR(isUsingMagnification) = false;
     GVAR(ppEffectNVGBrightness) ppEffectEnable (GVAR(effectScaling) == 0);
 
     // initialize the nightvision rscLayer, to prevent it from getting rendered infront of other rscLayers
-    (QGVAR(display) call BIS_fnc_rscLayer);
+    QGVAR(display) call BIS_fnc_rscLayer;
 
     addMissionEventHandler ["Loaded", { // Restart UI vars on mission load
         if (GVAR(running)) then {
